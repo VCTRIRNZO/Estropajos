@@ -1,0 +1,3355 @@
+
+<head>
+
+  <ul>
+          <li><a href="Actividades.html">Actividades</a></li>
+          <li><a href="inicio.html">Inicio</a></li>
+</ul>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Estropajo está en peligro!</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fondo atractivo para resaltar la tarjeta, pero no interfiere con el diseño */
+    /*body {
+      background: linear-gradient(135deg, #10172b 0%, #1a2a3a 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      padding: 1.5rem;
+    }
+
+    /* Contenedor principal: tarjeta estilo anuncio premium */
+    /* Bordes redondeados + sombra negra + fondo blanco + borde verde */
+    .ad-card {
+      background-color: #ffffff;
+      border: 2px solid #2b7e3a;        /* Borde verde destacado */
+      border-radius: 36px;               /* Bordes redondeados pronunciados */
+      box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.5), 0 8px 18px rgba(0, 0, 0, 0.3);
+      max-width: 460px;
+      width: 100%;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .ad-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 32px 48px -14px rgba(0, 0, 0, 0.6), 0 8px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Contenido interno con padding cómodo */
+    .card-content {
+      padding: 1.8rem 2rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    /* Etiqueta de "anuncio" pequeña para contexto visual */
+    .ad-badge {
+      display: inline-block;
+      background: #eef5e9;
+      color: #2b7e3a;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 0.25rem 1rem;
+      border-radius: 50px;
+      width: fit-content;
+      border: 0.5px solid #b9e0a6;
+      backdrop-filter: blur(2px);
+    }
+
+    /* Título llamativo */
+    .ad-title {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #0a2f1a;
+      letter-spacing: -0.3px;
+    }
+    .ad-title span {
+      background: linear-gradient(120deg, #2b7e3a, #4caf50);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    /* Descripción promocional */
+    .ad-description {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #2c3e2f;
+      margin-top: 0.2rem;
+      border-left: 3px solid #4caf50;
+      padding-left: 1rem;
+      background: #fefef7;
+      border-radius: 0 12px 12px 0;
+    }
+
+    /* Lista de beneficios (estilo anuncio) */
+    .benefits {
+      background: #f9fdf7;
+      border-radius: 24px;
+      padding: 0.8rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      margin: 0.2rem 0;
+    }
+    .benefit-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #1c3a1f;
+    }
+    .check-icon {
+      background: #e0f2e0;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #2b7e3a;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    /* Precio / oferta (elemento que suele aparecer en anuncios) */
+    .offer-price {
+      background: #eef2ea;
+      text-align: center;
+      padding: 0.6rem;
+      border-radius: 60px;
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: #7a8e6e;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .new-price {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #1f5e2c;
+      letter-spacing: -0.5px;
+    }
+    .price-note {
+      font-size: 0.7rem;
+      color: #5a7156;
+    }
+
+    /* BOTÓN DE DESCARGA (enlace falso) */
+    .download-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+      background: #2b7e3a;
+      border: none;
+      width: 100%;
+      padding: 1rem 1.2rem;
+      border-radius: 60px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: white;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+      box-shadow: 0 6px 0 #0e4a1a;
+      transform: translateY(-2px);
+    }
+    .download-btn:active {
+      transform: translateY(4px);
+      box-shadow: 0 2px 0 #0e4a1a;
+    }
+    /* Efecto hover sutil */
+    .download-btn:hover {
+      background: #1f6630;
+      gap: 0.9rem;
+    }
+
+    /* Texto de enlace falso (aclaración legal/ creativa) */
+    .fake-link-note {
+      text-align: center;
+      font-size: 0.7rem;
+      color: #8d9e87;
+      margin-top: 0.2rem;
+      border-top: 1px dashed #d4e2cc;
+      padding-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .fake-link-note a {
+      color: #2b7e3a;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .fake-link-note a:hover {
+      text-decoration: underline;
+    }
+
+    /* elemento decorativo adicional (simula confianza) */
+    .security-badge {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.7rem;
+      color: #6f8f68;
+      background: #f3f9ef;
+      padding: 0.3rem;
+      border-radius: 40px;
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 500px) {
+      .card-content {
+        padding: 1.5rem;
+      }
+      .ad-title {
+        font-size: 1.7rem;
+      }
+      .new-price {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 
+    TARJETA ANUNCIO CON BOTÓN DE DESCARGA FALSO
+    - Bordes redondeados (border-radius 36px)
+    - Sombra negra intensa (box-shadow con negro)
+    - Fondo blanco puro
+    - Bordes verdes (border 2px solid #2b7e3a)
+    - Contenido tipo anuncio promocional, con enlace de descarga que simula acción (no descarga real)
+  -->
+  <div class="ad-card">
+    <div class="card-content">
+
+      <!-- Badge de anuncio -->
+      <div class="ad-badge">
+        ⚡ OFERTA LIMITADA
+      </div>
+
+      <!-- Título principal -->
+      <h1 class="ad-title">
+        Estropajo Amarillo <span>necesita tu ayuda!</span>
+      </h1>
+
+      <!-- Descripción del anuncio -->
+      <div class="ad-description">
+        Estropajo Amarillo <strong>ha  sido secuestrado</strong> y está en la mansión de Vegetta777 en Pisos Picados.
+        
+        <p>
+            Esto debes hacer para salvarlo:
+        </p>
+
+      </div>
+
+      <!-- Lista de beneficios (estilo anuncio atractivo) -->
+      <div class="benefits">
+        <div class="benefit-item">
+          <span class="check-icon">✓</span>
+          <span>Pulsa sobre el botón verde.</span>
+        </div>
+        <div class="benefit-item">
+          <span class="check-icon">✓</span>
+          <span>Escanea el QR mágico.</span>
+        </div>
+        <div class="benefit-item">
+          <span class="check-icon">✓</span>
+          <span>Acepata todo y... ¡ya estaría listo!</span>
+        </div>
+      </div>
+
+      <!-- Bloque de precio / oferta (típico en anuncios) -->
+      <div class="offer-price">
+        <span class="old-price">$67.33</span>
+        <span class="new-price">¡GRATIS!</span>
+        <span class="price-note">(por tiempo limitado)</span>
+      </div>
+
+      <!-- 
+        BOTÓN DE DESCARGA FALSO 
+        Al hacer clic muestra un mensaje simulando inicio de descarga o redirección falsa.
+        No genera ningún archivo real, solo una alerta/notificación simulada.
+        Se puede modificar el comportamiento a gusto.
+      -->
+      <button class="download-btn" id="fakeDownloadBtn">
+        📥 DESCARGAR AHORA
+        <span style="font-size:1.2rem;">⬇️</span>
+      </button>
+
+      <!-- Pequeño texto de "enlace falso" y simulación de seguridad -->
+      <div class="fake-link-note">
+        <span>🔒 Descarga insegura verificada</span>
+        <span>•</span>
+        <a href="#" id="fakeLinkInfo">Términos de condiciones</a>
+      </div>
+
+      <div class="security-badge">
+        <span>🛡️</span> McAfee confía en este enlace :D
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      // Elementos de interacción: botón de descarga falso + enlace "términos falsos"
+      const downloadButton = document.getElementById('fakeDownloadBtn');
+      const fakeTermsLink = document.getElementById('fakeLinkInfo');
+
+      // Función para simular una descarga (solo mensaje de anuncio, sin archivos reales)
+      function simulateFakeDownload() {
+        // Pequeña simulación: podemos mostrar un mensaje emergente estilo "anuncio falso"
+        // También se podría crear un efecto de notificación.
+        alert('⚡ ANUNCIO DE DEMOSTRACIÓN ⚡\n\nEste es un botón de descarga FALSO.\nNingún archivo se ha descargado.\nLa tarjeta cumple con bordes verdes, redondeados, fondo blanco y sombra negra.\n\n👍 Ideal para maquetas o prototipos.');
+      
+        // Alternativa: Podríamos mostrar un mensaje en consola o cambiar temporalmente el texto del botón
+        const originalText = downloadButton.innerHTML;
+        downloadButton.innerHTML = '⏳ Simulando...';
+        setTimeout(() => {
+          downloadButton.innerHTML = originalText;
+        }, 800);
+      }
+
+      // Evento principal para el botón de descarga falso
+      if (downloadButton) {
+        downloadButton.addEventListener('click', function(e) {
+          e.preventDefault();
+          simulateFakeDownload();
+        });
+      }
+
+      // El enlace falso también muestra un mensaje informativo sin redirigir a nada real
+      if (fakeTermsLink) {
+        fakeTermsLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          alert('📄 Enlace de términos falso (solo para demostración).\nLa tarjeta HTML tiene bordes verdes, fondo blanco, sombra negra y bordes redondeados.\nNo se realiza ninguna descarga real.');
+        });
+      }
+
+      // Opcional: evitar cualquier comportamiento extraño con otros enlaces
+      const allFakeAnchors = document.querySelectorAll('.fake-link-note a');
+      allFakeAnchors.forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+          e.preventDefault();
+          // Mensaje genérico adicional si se hace clic en otros enlaces (aunque solo hay uno)
+          if(anchor.id !== 'fakeLinkInfo') {
+            alert('Enlace demostrativo - Anuncio simulado');
+          }
+        });
+      });
+    })();
+  </script>
+
+  <!-- Script para popup cada 5 segundos -->
+  <script>
+    setInterval(function() {
+      alert('🎉 ¡ANUNCIO ESPECIAL! 🎉\n\nNos encantaría que visites nuestra tienda.\n¡Tenemos ofertas increíbles para ti!');
+    }, 5000); // 5000 milisegundos = 5 segundos
+
+    // Script para 10 anuncios en cajas de texto con posición aleatoria al hacer click
+    const messages = [
+      '🛍️ ¡Ofertas increíbles en la tienda! 🛍️',
+      '💰 ¡Descuentos hasta 50%! 💰',
+      '⭐ ¡Productos premium a precios especiales! ⭐',
+      '🎁 ¡Compra ahora y recibe regalo! 🎁',
+      '🔥 ¡Liquidación total! 🔥',
+      '✨ ¡Estropajos con 70% de descuento! ✨',
+      '🎊 ¡Hoy es tu día de suerte! 🎊',
+      '💎 ¡Calidad premium con precio bajo! 💎',
+      '🚀 ¡Envío gratis en compras hoy! 🚀',
+      '🌟 ¡No te lo pierdas, oferta limitada! 🌟'
+    ];
+
+    const announceBoxes = [];
+    
+    // Crear 10 cajas de anuncio
+    for (let i = 0; i < 10; i++) {
+      const box = document.createElement('div');
+      box.className = 'announceBox';
+      box.style.cssText = `
+        position: fixed;
+        background: linear-gradient(135deg, #FFD700, #FFA500);
+        border: 50px solid #000000;
+        border-radius: 50px;
+        padding: 25px 30px;
+        font-size: 50px;
+        font-weight: bold;
+        color: #333;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        z-index: 9999;
+        display: none;
+        max-width: 350px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        position: relative;
+      `;
+      
+      // Crear el contenido del anuncio
+      const content = document.createElement('div');
+      content.innerHTML = messages[i];
+      
+      // Crear el botón de cierre
+      const closeBtn = document.createElement('button');
+      closeBtn.innerHTML = '✕';
+      closeBtn.style.cssText = `
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #FF6347;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      `;
+      closeBtn.onclick = function() {
+        box.style.display = 'none';
+      };
+      
+      box.appendChild(closeBtn);
+      box.appendChild(content);
+      document.body.appendChild(box);
+      announceBoxes.push(box);
+    }
+
+    document.addEventListener('click', function() {
+      // Seleccionar una caja aleatoria
+      const randomBox = announceBoxes[Math.floor(Math.random() * announceBoxes.length)];
+      
+      // Generar posición aleatoria
+      const randomX = Math.random() * (window.innerWidth - 400);
+      const randomY = Math.random() * (window.innerHeight - 400);
+      
+      randomBox.style.left = randomX + 'px';
+      randomBox.style.top = randomY + 'px';
+      randomBox.style.display = 'block';
+      
+      // Desaparecer después de 3 segundos
+      setTimeout(function() {
+        randomBox.style.display = 'none';
+      }, 1000000);
+    });
+  </script>
+
+  
+  <!-- 
+    NOTA ACLARATORIA: 
+    Esta tarjeta contiene un "anuncio" y un botón de descarga que no ejecuta ninguna descarga real.
+    Se ajusta a los requisitos: bordes redondeados (border-radius:36px), sombra negra (box-shadow con valores en negro),
+    fondo blanco (background: #ffffff), borde verde (2px solid #2b7e3a). 
+    Además incluye interacciones simuladas para demostración de componente publicitario.
+  -->
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎡 Ruleta de la suerte · Funcional</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            padding: 1rem;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 750px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(4px);
+            border-radius: 48px;
+            padding: 2rem 1.5rem 2rem 1.5rem;
+            box-shadow: 0 25px 40px -10px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 215, 100, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: 600;
+            font-size: 2.3rem;
+            letter-spacing: 2px;
+            color: #f5e7c8;
+            text-shadow: 0 4px 10px #00000033;
+            margin-top: -0.5rem;
+            margin-bottom: 0.5rem;
+            word-break: break-word;
+        }
+
+        .wheel-wrapper {
+            position: relative;
+            margin: 1.2rem auto;
+            max-width: 420px;
+            width: 100%;
+            aspect-ratio: 1/1;
+        }
+
+        canvas {
+            display: block;
+            width: 100% !important;
+            height: auto !important;
+            background: #2a3647;
+            border-radius: 50%;
+            box-shadow: 
+                0 0 0 8px #1e2a36,
+                0 20px 35px rgba(0, 0, 0, 0.7),
+                inset 0 5px 15px rgba(0,0,0,0.4);
+            transition: box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        canvas:active {
+            box-shadow: 0 0 0 8px #1e2a36, 0 15px 25px black, inset 0 5px 15px #00000080;
+        }
+
+        /* marcador / flecha */
+        .pointer {
+            position: absolute;
+            top: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 24px solid transparent;
+            border-right: 24px solid transparent;
+            border-top: 40px solid #e7b42c;
+            filter: drop-shadow(0 6px 6px #00000066);
+            z-index: 5;
+        }
+
+        .pointer::after {
+            content: "";
+            position: absolute;
+            top: -48px;
+            left: -6px;
+            width: 12px;
+            height: 12px;
+            background: radial-gradient(circle, #ffd966, #b8860b);
+            border-radius: 50%;
+            box-shadow: 0 0 8px gold;
+        }
+
+        /* panel de control */
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            margin: 28px 0 12px;
+        }
+
+        .btn {
+            background: #263446;
+            border: none;
+            border-bottom: 3px solid #0f1a24;
+            color: #f2e0c0;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 0.7rem 1.6rem;
+            min-width: 120px;
+            border-radius: 60px;
+            cursor: pointer;
+            box-shadow: 0 6px 0 #0f1a24, 0 5px 12px black;
+            transition: all 0.08s ease;
+            letter-spacing: 0.5px;
+            backdrop-filter: blur(4px);
+            background: #2e405b;
+            border-bottom: 3px solid #16222e;
+        }
+
+        .btn:hover {
+            background: #3f5677;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 0 #0f1a24, 0 8px 15px black;
+        }
+
+        .btn:active {
+            transform: translateY(4px);
+            box-shadow: 0 4px 0 #0f1a24, 0 5px 12px black;
+        }
+
+        .btn:disabled {
+            opacity: 0.45;
+            transform: none;
+            pointer-events: none;
+            filter: grayscale(0.5);
+            box-shadow: 0 4px 0 #0f1a24;
+        }
+
+        .result-area {
+            background: #0b121c80;
+            border-radius: 48px;
+            padding: 0.7rem 1.5rem;
+            margin: 10px 10px 0;
+            text-align: center;
+            backdrop-filter: blur(4px);
+            border: 1px solid #e4b44140;
+        }
+
+        .result-text {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #ffde9e;
+            text-shadow: 0 2px 5px black;
+            min-height: 3.2rem;
+            word-break: break-word;
+        }
+
+        .label-light {
+            color: #b9cddc;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .edit-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        .input-item {
+            background: #1c2738;
+            border: 1px solid #596f89;
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            color: white;
+            font-size: 1rem;
+            width: 180px;
+            outline: none;
+            transition: 0.15s;
+        }
+
+        .input-item:focus {
+            border-color: #e7b42c;
+            box-shadow: 0 0 0 3px #e7b42c33;
+        }
+
+        .small-btn {
+            background: #33485d;
+            border: none;
+            border-bottom: 2px solid #121e2a;
+            color: #f2ddb3;
+            padding: 0.5rem 1.3rem;
+            border-radius: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.1s;
+            box-shadow: 0 3px 0 #0f1a24;
+        }
+
+        .small-btn:hover {
+            background: #45617e;
+            transform: translateY(-1px);
+        }
+
+        .small-btn:active {
+            transform: translateY(3px);
+            box-shadow: none;
+        }
+
+        .footer-note {
+            color: #9eb0c2;
+            margin-top: 16px;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🎲 RULETA GIRATORIA</h1>
+
+    <!-- Ruleta y flecha -->
+    <div class="wheel-wrapper">
+        <div class="pointer"></div>
+        <canvas id="wheelCanvas" width="600" height="600"></canvas>
+    </div>
+
+    <!-- Botones principales -->
+    <div class="controls">
+        <button class="btn" id="spinBtn">🎯 GIRAR</button>
+        <button class="btn" id="resetBtn">🔄 REINICIAR</button>
+    </div>
+
+    <!-- Resultado en grande -->
+    <div class="result-area">
+        <div class="label-light">🏆 RESULTADO</div>
+        <div class="result-text" id="resultDisplay">—</div>
+    </div>
+
+    <!-- Personalización rápida -->
+    <div class="edit-section">
+        <input type="text" id="newOptionInput" class="input-item" placeholder="Ej: Viaje ✈️" maxlength="18" value="Premio">
+        <button class="small-btn" id="addOptionBtn">➕ Añadir</button>
+        <button class="small-btn" id="removeLastBtn">✖️ Quitar última</button>
+    </div>
+    <div class="footer-note">
+        ⚡ Click en la ruleta también gira · Opciones editables
+    </div>
+</div>
+
+<script>
+    (function() {
+        "use strict";
+
+        // ----- CONFIGURACIÓN INICIAL -----
+        const DEFAULT_OPTIONS = [
+            "Muerte", 
+            "Muerte", 
+            "H2 gratis", 
+            "Muerte", 
+            "Muerte", 
+            "Estropajo Gratis",
+            "Muerte",
+            "🌟 Sorpresa"
+        ];
+
+        // colores vibrantes (ciclan)
+        const COLOR_PALETTE = [
+            '#E76F51', '#F4A261', '#E9C46A', '#6A994E',
+            '#A7C957', '#468FAF', '#5E548E', '#9F86C0',
+            '#D62828', '#F77F00', '#2A9D8F', '#264653'
+        ];
+
+        // elementos del DOM
+        const canvas = document.getElementById('wheelCanvas');
+        const ctx = canvas.getContext('2d');
+        const spinBtn = document.getElementById('spinBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const resultDisplay = document.getElementById('resultDisplay');
+        const newOptionInput = document.getElementById('newOptionInput');
+        const addOptionBtn = document.getElementById('addOptionBtn');
+        const removeLastBtn = document.getElementById('removeLastBtn');
+
+        // estado
+        let sectors = [...DEFAULT_OPTIONS];         // etiquetas
+        let rotation = 0.0;                         // radianes acumulados
+        let isSpinning = false;
+        let spinVelocity = 10000.0;
+        let animationFrame = null;
+        let spinResolve = null;                     // para saber cuando termina
+
+        // ----- DIBUJAR RULETA -----
+        function drawWheel() {
+            const count = sectors.length;
+            if (count === 0) {
+                // Si no hay sectores, mostramos vacío
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#1e2a36';
+                ctx.beginPath();
+                ctx.arc(300, 300, 280, 0, 2 * Math.PI);
+                ctx.fill();
+                ctx.fillStyle = '#b9b9b9';
+                ctx.font = 'bold 22px "Segoe UI", Roboto';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText('➕ Añade opciones', 300, 300);
+                return;
+            }
+
+            const angleStep = (Math.PI * 2) / count;
+            const radius = 260;       // radio del pastel
+            const centerX = 300, centerY = 300;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Dibujar cada sector
+            for (let i = 0; i < count; i++) {
+                const startAngle = i * angleStep + rotation;
+                const endAngle = startAngle + angleStep;
+                
+                // color según paleta
+                ctx.fillStyle = COLOR_PALETTE[i % COLOR_PALETTE.length];
+                ctx.beginPath();
+                ctx.moveTo(centerX, centerY);
+                ctx.arc(centerX, centerY, radius, startAngle, endAngle);
+                ctx.closePath();
+                ctx.fill();
+                
+                // Borde separador
+                ctx.strokeStyle = '#1E272E';
+                ctx.lineWidth = 2.5;
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, radius, startAngle, endAngle);
+                ctx.lineTo(centerX, centerY);
+                ctx.stroke();
+
+                // Texto del sector
+                ctx.save();
+                ctx.translate(centerX, centerY);
+                ctx.rotate(startAngle + angleStep / 2);
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.font = 'bold 17px "Segoe UI", Roboto, sans-serif';
+                ctx.fillStyle = '#FDF6E3';
+                ctx.shadowColor = '#0f0f0f';
+                ctx.shadowBlur = 6;
+                ctx.shadowOffsetX = 1;
+                ctx.shadowOffsetY = 1;
+                
+                const text = sectors[i];
+                const textRadius = radius * 0.68;
+                ctx.fillText(text, textRadius, 0);
+                ctx.restore();
+            }
+            
+            // circulo central decorativo
+            ctx.shadowBlur = 0;
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 45, 0, 2 * Math.PI);
+            ctx.fillStyle = '#1e2a36';
+            ctx.fill();
+            ctx.strokeStyle = '#F4D03F';
+            ctx.lineWidth = 6;
+            ctx.stroke();
+            
+            // centro interior
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 28, 0, 2 * Math.PI);
+            ctx.fillStyle = '#2c3e50';
+            ctx.fill();
+            ctx.fillStyle = '#F7DC6F';
+            ctx.font = 'bold 14px "Segoe UI"';
+            ctx.fillText('🎲', centerX, centerY-3);
+        }
+
+        // ----- OBTENER SECTOR GANADOR (según ángulo actual) -----
+        function getCurrentSectorIndex() {
+            const count = sectors.length;
+            if (count === 0) return -1;
+            
+            // ángulo normalizado (0 apunta a la derecha, pero la flecha está arriba → ajustamos)
+            // la flecha está en la parte superior ( -90° = -PI/2 )
+            const pointerAngle = (Math.PI * 1.5); // equivalente a -PI/2 pero normalizado  (270°)
+            
+            let rawAngle = (pointerAngle - rotation + 2 * Math.PI) % (2 * Math.PI);
+            const angleStep = (2 * Math.PI) / count;
+            const idx = Math.floor(rawAngle / angleStep);
+            return idx >= count ? 0 : idx;
+        }
+
+        function updateResultText() {
+            if (sectors.length === 0) {
+                resultDisplay.textContent = '— (sin opciones)';
+                return;
+            }
+            const idx = getCurrentSectorIndex();
+            resultDisplay.textContent = sectors[idx] || '?';
+        }
+
+        // ----- ANIMACIÓN DE GIRO (física simple) -----
+        function spinAnimationStep() {
+            if (!isSpinning) return;
+            
+            // aplicar fricción
+            spinVelocity *= 0.985; 
+            
+            // actualizar rotación
+            rotation = (rotation + spinVelocity) % (2 * Math.PI);
+            drawWheel();
+            
+            // actualizar resultado en tiempo real (para que se vea)
+            if (sectors.length) {
+                const idx = getCurrentSectorIndex();
+                resultDisplay.textContent = sectors[idx];
+            }
+            
+            // detección de parada
+            if (Math.abs(spinVelocity) < 0.0025) {
+                // finaliza el giro
+                isSpinning = false;
+                spinVelocity = 0;
+                if (spinResolve) {
+                    spinResolve();
+                    spinResolve = null;
+                }
+                // Habilitar botones
+                spinBtn.disabled = false;
+                resetBtn.disabled = false;
+                // actualizar resultado final
+                updateResultText();
+                if (animationFrame) {
+                    cancelAnimationFrame(animationFrame);
+                    animationFrame = null;
+                }
+                return;
+            }
+            
+            animationFrame = requestAnimationFrame(spinAnimationStep);
+        }
+
+        function startSpin(initialVelocity = null) {
+            if (isSpinning) return;
+            if (sectors.length === 0) {
+                alert('⚠️ Añade al menos una opción para girar');
+                return;
+            }
+            
+            // cancelar animación previa por seguridad
+            if (animationFrame) {
+                cancelAnimationFrame(animationFrame);
+                animationFrame = null;
+            }
+            
+            isSpinning = true;
+            spinBtn.disabled = true;
+            resetBtn.disabled = true;
+            
+            // velocidad inicial: aleatoria entre 0.45 y 0.9 rad/frame
+            const vel = (initialVelocity !== null) ? initialVelocity : (0.45 + Math.random() * 0.65);
+            spinVelocity = vel;
+            
+            // comenzar animación
+            animationFrame = requestAnimationFrame(spinAnimationStep);
+            
+            // devolver promesa por si se quiere encadenar (no obligatorio)
+            return new Promise(resolve => { spinResolve = resolve; });
+        }
+
+        // ---- DETENER MANUALMENTE (opcional, pero no incluimos botón stop para simplicidad)
+        
+        // ----- REINICIAR ROTACIÓN (vuelve a posición base) -----
+        function resetWheel() {
+            if (isSpinning) {
+                // si está girando, cancelamos animación
+                isSpinning = false;
+                spinVelocity = 0;
+                if (animationFrame) {
+                    cancelAnimationFrame(animationFrame);
+                    animationFrame = null;
+                }
+                spinBtn.disabled = false;
+                resetBtn.disabled = false;
+                if (spinResolve) {
+                    spinResolve();
+                    spinResolve = null;
+                }
+            }
+            rotation = 0.0;
+            drawWheel();
+            updateResultText();
+        }
+
+        // ----- ACTUALIZAR SECTORES (añadir / quitar) -----
+        function addOption(optionText) {
+            const trimmed = optionText.trim();
+            if (trimmed === '') {
+                alert('Escribe algo para añadir');
+                return;
+            }
+            sectors.push(trimmed);
+            resetWheel();        // redibuja y resetea rotación
+            drawWheel();
+            updateResultText();
+            newOptionInput.value = '';
+            newOptionInput.focus();
+        }
+
+        function removeLastOption() {
+            if (sectors.length <= 1) {
+                if (sectors.length === 1) {
+                    sectors.pop();
+                } else {
+                    alert('No hay opciones para eliminar');
+                    return;
+                }
+            } else {
+                sectors.pop();
+            }
+            resetWheel();
+            drawWheel();
+            updateResultText();
+        }
+
+        // ---- RESTAURAR VALORES POR DEFECTO ----
+        function restoreDefaultOptions() {
+            sectors = [...DEFAULT_OPTIONS];
+            resetWheel();
+            drawWheel();
+            updateResultText();
+        }
+
+        // ----- EVENTOS -----
+        spinBtn.addEventListener('click', () => {
+            startSpin();
+        });
+
+        resetBtn.addEventListener('click', () => {
+            // Si se pulsa reset, restauramos opciones por defecto
+            restoreDefaultOptions();
+        });
+
+        // click en canvas también gira
+        canvas.addEventListener('click', () => {
+            if (!isSpinning && sectors.length > 0) {
+                startSpin();
+            } else if (sectors.length === 0) {
+                alert('Añade opciones para jugar');
+            }
+        });
+
+        addOptionBtn.addEventListener('click', () => {
+            addOption(newOptionInput.value);
+        });
+
+        removeLastBtn.addEventListener('click', removeLastOption);
+
+        newOptionInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                addOption(newOptionInput.value);
+            }
+        });
+
+        // Inicializar dibujo
+        drawWheel();
+        updateResultText();
+
+        // Ajustar por si se quiere reiniciar sin perder custom, resetBtn lo deja por defecto
+        // Pero también podrías querer resetear solo rotación: ya lo hace resetWheel
+        // Dejamos restoreDefaultOptions en resetBtn.
+        
+        // por si alguien quiere resetear rotación sin cambiar opciones:
+        // (ya lo hace resetWheel, pero se llama dentro de restoreDefaultOptions, 
+        //  podemos ofrecer un doble reset? mejor no)
+        // Si quieres resetear solo la rotación sin perder opciones, puedes llamar resetWheel()
+        // pero no tenemos botón para eso. Se puede hacer doble click en reset? mejor consistente.
+        
+        // Extra: que el botón reset restaure opciones por defecto.
+        // Pero para girar de nuevo sin resetear opciones, solo presiona GIRAR.
+        
+        // expone función globalmente para debug (opcional)
+        window.debugWheel = { sectors, rotation, resetWheel, drawWheel };
+    })();
+</script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Anuncio Roblox Gratis - Consigue Robux y Objetos Exclusivos</title>
+    <!-- Fuentes modernas y atractivas para el público de Roblox -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para iconos llamativos (opcional pero mejora el diseño) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #0b0f1c 0%, #0a0e1a 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Inter', 'Montserrat', sans-serif;
+            padding: 20px;
+        }
+
+        /* Contenedor principal tipo "card" con efecto glassmorphism + brillo */
+        .ad-container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(18, 22, 35, 0.75);
+            backdrop-filter: blur(12px);
+            border-radius: 48px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 215, 0, 0.1) inset, 0 0 20px rgba(255, 200, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .ad-container:hover {
+            transform: scale(1.01);
+            box-shadow: 0 30px 55px rgba(0, 0, 0, 0.6), 0 0 0 2px rgba(255, 200, 0, 0.4) inset, 0 0 30px rgba(255, 200, 0, 0.3);
+        }
+
+        /* Header con gradiente dinámico estilo Roblox */
+        .ad-header {
+            background: linear-gradient(135deg, #ff6a00, #ee2a7b, #7b2f9d);
+            padding: 28px 24px 20px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ad-header::before {
+            content: "⚡ GRATIS ⚡";
+            position: absolute;
+            top: 12px;
+            right: -30px;
+            background: #ffd966;
+            color: #1e1a2f;
+            font-weight: 900;
+            font-size: 14px;
+            padding: 6px 40px;
+            transform: rotate(35deg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .badge-roblox {
+            display: inline-block;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(4px);
+            border-radius: 100px;
+            padding: 6px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffd966;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            border: 1px solid rgba(255, 217, 0, 0.6);
+        }
+
+        .ad-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 900;
+            color: white;
+            text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .ad-header h1 i {
+            font-size: 2rem;
+            margin-right: 8px;
+            color: #ffcd4a;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #ffecb3;
+            background: rgba(0,0,0,0.3);
+            display: inline-block;
+            padding: 4px 18px;
+            border-radius: 40px;
+        }
+
+        /* Cuerpo principal */
+        .ad-body {
+            padding: 32px 28px;
+            color: #f0f3fa;
+        }
+
+        .offer-highlight {
+            background: linear-gradient(120deg, #242b44, #1b1f32);
+            border-radius: 32px;
+            padding: 20px;
+            margin-bottom: 28px;
+            border: 1px solid rgba(255, 200, 100, 0.4);
+            box-shadow: 0 8px 14px rgba(0,0,0,0.3);
+        }
+
+        .price-tag {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .old-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #a0a9ce;
+            text-decoration: line-through;
+            letter-spacing: 1px;
+        }
+
+        .new-price {
+            font-size: 3.2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #FFD966, #FFB347);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            letter-spacing: -1px;
+        }
+
+        .price-note {
+            font-size: 0.9rem;
+            background: #00000055;
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-weight: 500;
+        }
+
+        .gift-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin: 24px 0 16px;
+        }
+
+        .gift-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 20px;
+            border-radius: 60px;
+            backdrop-filter: blur(4px);
+            transition: 0.2s;
+            border: 1px solid rgba(255,215,0,0.2);
+        }
+
+        .gift-item i {
+            font-size: 32px;
+            width: 44px;
+            text-align: center;
+            color: #ffbb44;
+        }
+
+        .gift-text {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .gift-text span {
+            font-weight: 800;
+            color: #FFD966;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .cta-button {
+            display: block;
+            background: linear-gradient(95deg, #ff8c00, #ff2b6e);
+            text-align: center;
+            padding: 18px 12px;
+            margin: 28px 0 20px;
+            border-radius: 60px;
+            font-weight: 800;
+            font-size: 1.6rem;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+            box-shadow: 0 12px 18px -6px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 220, 100, 0.7);
+            text-shadow: 0 1px 2px black;
+        }
+
+        .cta-button i {
+            margin-right: 12px;
+            font-size: 1.8rem;
+            vertical-align: middle;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(95deg, #ff9f2e, #ff427f);
+            box-shadow: 0 18px 25px -8px black;
+            letter-spacing: 2px;
+        }
+
+        .small-note {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #96a0c2;
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .small-note i {
+            margin-right: 6px;
+        }
+
+        .footer-promo {
+            background: #0e111c;
+            padding: 18px 24px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 200, 0, 0.3);
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .footer-promo .secure {
+            color: #80ffaa;
+        }
+
+        .countdown {
+            background: #00000066;
+            border-radius: 50px;
+            padding: 5px 12px;
+            font-weight: 600;
+            font-family: monospace;
+            letter-spacing: 1px;
+        }
+
+        /* Animación sutil en items */
+        @keyframes pulse-gold {
+            0% { border-color: rgba(255,215,0,0.3); box-shadow: 0 0 0px rgba(255,215,0,0);}
+            100% { border-color: rgba(255,215,0,0.8); box-shadow: 0 0 8px rgba(255,215,0,0.5);}
+        }
+
+        .gift-item:hover {
+            animation: pulse-gold 0.8s infinite alternate;
+            background: rgba(255, 215, 0, 0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 550px) {
+            .ad-header h1 {
+                font-size: 1.8rem;
+            }
+            .cta-button {
+                font-size: 1.2rem;
+                padding: 14px 10px;
+            }
+            .new-price {
+                font-size: 2.2rem;
+            }
+            .old-price {
+                font-size: 1.3rem;
+            }
+            .ad-body {
+                padding: 22px 18px;
+            }
+            .gift-item i {
+                font-size: 26px;
+                width: 36px;
+            }
+            .gift-text {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ad-container">
+        <!-- Encabezado impactante estilo Roblox -->
+        <div class="ad-header">
+            <div class="badge-roblox">
+                <i class="fas fa-crown"></i> OFERTA LIMITADA <i class="fas fa-bolt"></i>
+            </div>
+            <h1>
+                <i class="fab fa-roblox"></i> ROBLOX GRATIS
+            </h1>
+            <div class="subhead">
+                🔥 ¡Robux + Objetos Épicos + Membresía Premium! 🔥
+            </div>
+        </div>
+
+        <!-- Cuerpo del anuncio -->
+        <div class="ad-body">
+            <div class="offer-highlight">
+                <div class="price-tag">
+                    <span class="old-price">9.999 Robux</span>
+                    <span class="new-price">¡100% GRATIS!</span>
+                </div>
+                <div class="price-note">
+                    <i class="fas fa-gem"></i> Sin tarjetas • Sin encuestas • Verificado
+                </div>
+            </div>
+
+            <!-- Lista de regalos gratuitos (ultra atractiva) -->
+            <div class="gift-list">
+                <div class="gift-item">
+                    <i class="fas fa-coins"></i>
+                    <div class="gift-text"><span>🎁 10,000 Robux GRATIS</span> — Carga instantánea a tu cuenta</div>
+                </div>
+                <div class="gift-item">
+                    <i class="fas fa-user-astronaut"></i>
+                    <div class="gift-text"><span>✨ Outfits Legendarios</span> — Itemes exclusivos edición "Dorado"</div>
+                </div>
+                <div class="gift-item">
+                    <i class="fas fa-trophy"></i>
+                    <div class="gift-text"><span>🏆 Membresía Premium 1 mes</span> — Acceso a juegos VIP y beneficios</div>
+                </div>
+                <div class="gift-item">
+                    <i class="fas fa-gamepad"></i>
+                    <div class="gift-text"><span>⚡ Pases de Juego Secretos</span> — En Adopt Me, Pet Simulator, Blox Fruits</div>
+                </div>
+            </div>
+
+            <!-- Botón de llamado a la acción enorme y atractivo -->
+            <a href="#" class="cta-button" id="claimButton">
+                <i class="fas fa-gift"></i> ¡RECLAMAR AHORA!
+            </a>
+
+            <div class="small-note">
+                <span><i class="fas fa-check-circle"></i> Verificado por +2M de jugadores</span>
+                <span><i class="fas fa-clock"></i> Oferta válida hoy</span>
+                <span><i class="fas fa-shield-alt"></i> 100% seguro y sin virus</span>
+            </div>
+        </div>
+
+        <!-- Footer con confianza y contador dinámico -->
+        <div class="footer-promo">
+            <div class="secure">
+                <i class="fas fa-lock"></i> Conexión segura SSL · Roblox oficial partners
+            </div>
+            <div class="countdown" id="countdownTimer">
+                ⏳ Oferta expira en: <span id="timer">05:00</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pequeña ventana modal simulando la recompensa gratis (interactiva y divertida) -->
+    <div id="rewardModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); backdrop-filter: blur(12px); z-index: 1000; justify-content: center; align-items: center; font-family: 'Inter', sans-serif;">
+        <div style="background: linear-gradient(145deg, #1f2336, #121624); max-width: 450px; width: 90%; border-radius: 48px; border: 2px solid #ffcd4a; padding: 28px 20px; text-align: center; box-shadow: 0 30px 40px black; animation: zoomIn 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);">
+            <i class="fas fa-ticket-alt" style="font-size: 60px; color: #ffcd4a; margin-bottom: 12px; display: inline-block;"></i>
+            <h2 style="color: white; font-size: 1.9rem; font-weight: 800;">¡CÓDIGO RECLAMADO!</h2>
+            <div style="background: #00000066; padding: 14px; border-radius: 32px; margin: 18px 0;">
+                <p style="color: #FFD966; font-weight: bold; font-size: 1.3rem; letter-spacing: 1px;">✨ ROBLOX-FREE-2025 ✨</p>
+                <p style="color: #bbccff; margin-top: 8px; font-size: 0.9rem;">Canjea este código en <strong>roblox.com/redeem</strong> y recibe:</p>
+                <ul style="text-align: left; display: inline-block; margin-top: 8px; color: #d2deff;">
+                    <li>✅ 10,000 Robux</li>
+                    <li>✅ 30 días de Premium</li>
+                    <li>✅ Item exclusivo "Golden Noob"</li>
+                </ul>
+            </div>
+            <p style="color: #a5b3e0; margin-bottom: 20px;">El código ha sido agregado a tu portapapeles. ¡Usalo antes de que expire!</p>
+            <button id="closeModalBtn" style="background: linear-gradient(95deg, #ff8c00, #ff2b6e); border: none; color: white; font-weight: bold; padding: 12px 30px; border-radius: 60px; font-size: 1rem; cursor: pointer; transition: 0.2s;">¡A CANJEAR!</button>
+        </div>
+    </div>
+
+    <style>
+        @keyframes zoomIn {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+
+    <script>
+        (function() {
+            // ---- Contador de tiempo regresivo (5 minutos para dar sensación de urgencia) ----
+            let timeLeft = 5 * 60; // 5 minutos en segundos
+            const timerElement = document.getElementById('timer');
+            
+            function updateTimerDisplay() {
+                if (!timerElement) return;
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }
+            
+            function startCountdown() {
+                if (!timerElement) return;
+                updateTimerDisplay();
+                const interval = setInterval(() => {
+                    if (timeLeft <= 1) {
+                        clearInterval(interval);
+                        timerElement.textContent = "00:00";
+                        // Opcional: cambiar mensaje de expiración
+                        const countdownDiv = document.querySelector('.countdown');
+                        if(countdownDiv) countdownDiv.style.backgroundColor = "#aa2e4e";
+                        // Mostrar aviso sutil de que la oferta "expiro" pero aun asi se puede reclamar
+                        const timerSpan = document.getElementById('timer');
+                        if(timerSpan) timerSpan.style.fontWeight = "bold";
+                    } else {
+                        timeLeft--;
+                        updateTimerDisplay();
+                    }
+                }, 1000);
+            }
+            
+            startCountdown();
+            
+            // ---- Lógica del botón de reclamar y modal interactivo ----
+            const claimBtn = document.getElementById('claimButton');
+            const modal = document.getElementById('rewardModal');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            
+            // Función para abrir modal con animación y copiar código
+            function openRewardModal() {
+                if (modal) {
+                    modal.style.display = 'flex';
+                    // Crear un input temporal para copiar el código al portapapeles
+                    const code = "ROBLOX-FREE-2025";
+                    // Copiar al portapapeles
+                    navigator.clipboard.writeText(code).then(() => {
+                        // opcional: pequeño toast o ya se indica en modal
+                        const toastMsg = document.createElement('div');
+                        toastMsg.innerText = "📋 Código copiado al portapapeles";
+                        toastMsg.style.position = "fixed";
+                        toastMsg.style.bottom = "20px";
+                        toastMsg.style.left = "50%";
+                        toastMsg.style.transform = "translateX(-50%)";
+                        toastMsg.style.backgroundColor = "#1f2336";
+                        toastMsg.style.color = "#FFD966";
+                        toastMsg.style.padding = "10px 20px";
+                        toastMsg.style.borderRadius = "40px";
+                        toastMsg.style.fontWeight = "bold";
+                        toastMsg.style.zIndex = "1100";
+                        toastMsg.style.border = "1px solid gold";
+                        document.body.appendChild(toastMsg);
+                        setTimeout(() => toastMsg.remove(), 2500);
+                    }).catch(err => {
+                        console.warn("No se pudo copiar automáticamente, pero el código se muestra igual.");
+                    });
+                }
+            }
+            
+            // Evento principal: Mostrar el modal y simular recompensa
+            claimBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                // Agregar efecto de clic y deshabilitar momentaneamente (evitar doble clic)
+                claimBtn.style.transform = "scale(0.98)";
+                setTimeout(() => {
+                    claimBtn.style.transform = "";
+                }, 150);
+                openRewardModal();
+            });
+            
+            // Cerrar modal con el botón
+            if (closeModalBtn) {
+                closeModalBtn.addEventListener('click', () => {
+                    modal.style.display = 'none';
+                    // Pequeño mensaje de agradecimiento o redirección simbólica
+                    const redirectMsg = document.createElement('div');
+                    redirectMsg.innerText = "🔓 ¡Ve a Roblox.com/redeem y pega el código! Disfruta tu contenido GRATIS";
+                    redirectMsg.style.position = "fixed";
+                    redirectMsg.style.bottom = "30px";
+                    redirectMsg.style.left = "50%";
+                    redirectMsg.style.transform = "translateX(-50%)";
+                    redirectMsg.style.backgroundColor = "#000000aa";
+                    redirectMsg.style.backdropFilter = "blur(8px)";
+                    redirectMsg.style.color = "#FFE484";
+                    redirectMsg.style.padding = "12px 24px";
+                    redirectMsg.style.borderRadius = "60px";
+                    redirectMsg.style.fontWeight = "bold";
+                    redirectMsg.style.zIndex = "1100";
+                    redirectMsg.style.border = "1px solid #ffbb44";
+                    redirectMsg.style.fontSize = "0.9rem";
+                    document.body.appendChild(redirectMsg);
+                    setTimeout(() => redirectMsg.remove(), 4000);
+
+                    
+                });
+            }
+            
+            // Hacer clic fuera del modal para cerrar (si se clica en el fondo oscuro)
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            }
+            
+            // Efecto hover extra en botones, más vivacidad
+            const allGifts = document.querySelectorAll('.gift-item');
+            allGifts.forEach(item => {
+                item.addEventListener('click', () => {
+                    // simple efecto para mostrar que son interactivos, pero no obligatorio
+                    const tempMsg = document.createElement('div');
+                    tempMsg.innerText = "🎁 ¡Reclama el bono principal arriba!";
+                    tempMsg.style.position = "fixed";
+                    tempMsg.style.bottom = "100px";
+                    tempMsg.style.left = "50%";
+                    tempMsg.style.transform = "translateX(-50%)";
+                    tempMsg.style.backgroundColor = "#000000aa";
+                    tempMsg.style.color = "#FFD966";
+                    tempMsg.style.padding = "6px 16px";
+                    tempMsg.style.borderRadius = "40px";
+                    tempMsg.style.fontSize = "12px";
+                    tempMsg.style.zIndex = "1050";
+                    document.body.appendChild(tempMsg);
+                    setTimeout(() => tempMsg.remove(), 1500);
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Anuncio GTA VI - Acceso Archivos Filtrados | Material Exclusivo</title>
+    <!-- Fuentes de estilo moderno y agresivo (estilo GTA) -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: radial-gradient(circle at 20% 30%, #0a0c12, #010101);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Inter', 'Orbitron', sans-serif;
+            padding: 20px;
+        }
+
+        /* Contenedor principal estilo "hacker/underground" */
+        .leak-container {
+            max-width: 880px;
+            width: 100%;
+            background: rgba(6, 8, 15, 0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 32px;
+            border: 1px solid rgba(255, 40, 80, 0.6);
+            box-shadow: 0 0 30px rgba(255, 20, 60, 0.3), 0 20px 35px rgba(0, 0, 0, 0.6);
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .leak-container:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0 40px rgba(255, 30, 80, 0.5), 0 25px 40px rgba(0, 0, 0, 0.8);
+            border-color: #ff3366;
+        }
+
+        /* Encabezado con degradado peligroso */
+        .leak-header {
+            background: linear-gradient(135deg, #0f0c1f, #1a0b16, #2a0a1e);
+            padding: 28px 24px 20px;
+            text-align: center;
+            position: relative;
+            border-bottom: 2px solid #ff2a4a;
+        }
+
+        .badge-leak {
+            display: inline-block;
+            background: #ff1a3c;
+            color: #fff;
+            font-weight: 900;
+            font-size: 0.75rem;
+            padding: 6px 14px;
+            border-radius: 40px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            box-shadow: 0 0 12px #ff1a3c;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .leak-header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ff3a6f, #ff9a2e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 8px rgba(255, 50, 100, 0.6);
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+        }
+
+        .leak-header h1 i {
+            color: #ff3a6f;
+            background: none;
+            -webkit-background-clip: unset;
+            background-clip: unset;
+            text-shadow: 0 0 5px red;
+        }
+
+        .sub-alert {
+            background: rgba(0, 0, 0, 0.6);
+            display: inline-block;
+            padding: 5px 18px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #ffb347;
+            backdrop-filter: blur(4px);
+            font-family: monospace;
+        }
+
+        /* Cuerpo principal con datos confidenciales */
+        .leak-body {
+            padding: 32px 28px;
+        }
+
+        .warning-card {
+            background: rgba(20, 10, 18, 0.8);
+            border-left: 6px solid #ff3366;
+            border-radius: 24px;
+            padding: 20px;
+            margin-bottom: 28px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+        }
+
+        .file-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin: 28px 0;
+        }
+
+        .file-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background: rgba(0, 0, 0, 0.55);
+            padding: 14px 20px;
+            border-radius: 60px;
+            border: 1px solid rgba(255, 70, 100, 0.5);
+            transition: 0.2s;
+        }
+
+        .file-info {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .file-info i {
+            font-size: 28px;
+            width: 42px;
+            text-align: center;
+            color: #ff5e7e;
+        }
+
+        .file-name {
+            font-weight: 800;
+            font-size: 1rem;
+            font-family: monospace;
+            letter-spacing: 0.5px;
+            color: #ffcf9a;
+        }
+
+        .file-size {
+            font-size: 0.75rem;
+            background: #1e1a2f;
+            padding: 4px 12px;
+            border-radius: 30px;
+            color: #bb9eff;
+        }
+
+        .download-badge {
+            background: #ff1a3c;
+            padding: 5px 14px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.7rem;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .leak-stats {
+            display: flex;
+            justify-content: space-between;
+            background: #0b0e17;
+            border-radius: 60px;
+            padding: 12px 20px;
+            margin: 20px 0 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid #ff3366;
+        }
+
+        .cta-leak {
+            display: block;
+            background: linear-gradient(95deg, #d41b3c, #b01050);
+            text-align: center;
+            padding: 18px 12px;
+            margin: 24px 0 20px;
+            border-radius: 60px;
+            font-weight: 800;
+            font-size: 1.5rem;
+            font-family: 'Orbitron', monospace;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 2px;
+            transition: all 0.2s;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 100, 100, 0.8);
+            text-shadow: 0 2px 2px black;
+        }
+
+        .cta-leak i {
+            margin-right: 12px;
+        }
+
+        .cta-leak:hover {
+            background: linear-gradient(95deg, #ff2a4a, #cc1050);
+            transform: scale(1.02);
+            letter-spacing: 3px;
+            box-shadow: 0 0 18px #ff3366;
+        }
+
+        .disclaimer {
+            text-align: center;
+            font-size: 0.7rem;
+            color: #b0a1c0;
+            margin-top: 20px;
+            border-top: 1px dashed #ff3366;
+            padding-top: 18px;
+        }
+
+        .footer-leak {
+            background: #03050c;
+            padding: 14px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 0.7rem;
+            border-top: 1px solid #ff2a4a;
+        }
+
+        .live-dots {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            font-family: monospace;
+            font-weight: bold;
+        }
+
+        .red-dot {
+            width: 10px;
+            height: 10px;
+            background: #ff3366;
+            border-radius: 50%;
+            animation: pulseRed 1.2s infinite;
+        }
+
+        @keyframes pulseRed {
+            0% { opacity: 0.4; transform: scale(0.8); box-shadow: 0 0 0 0 #ff3366;}
+            100% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 0 6px rgba(255, 51, 102, 0);}
+        }
+
+        .counter-users {
+            font-weight: 800;
+            background: #00000066;
+            padding: 4px 12px;
+            border-radius: 30px;
+        }
+
+        /* Modal de acceso filtrado con descarga simulada */
+        .modal-leak {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            backdrop-filter: blur(14px);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Inter', monospace;
+        }
+
+        .modal-content {
+            background: #0b0d18;
+            max-width: 500px;
+            width: 90%;
+            border-radius: 36px;
+            border: 2px solid #ff3366;
+            padding: 28px 20px;
+            text-align: center;
+            box-shadow: 0 0 40px rgba(255, 50, 100, 0.4);
+            animation: glitchModal 0.2s ease;
+        }
+
+        @keyframes glitchModal {
+            0% { transform: skew(2deg, 1deg); opacity: 0;}
+            100% { transform: skew(0); opacity: 1;}
+        }
+
+        .modal-content h2 {
+            color: #ff5e7e;
+            font-family: 'Orbitron';
+            font-size: 1.9rem;
+            margin-bottom: 12px;
+        }
+
+        .folder-icon {
+            font-size: 70px;
+            color: #ff9a2e;
+            margin: 10px 0;
+        }
+
+        .download-link {
+            background: #1e1b2e;
+            padding: 16px;
+            border-radius: 28px;
+            margin: 20px 0;
+            word-break: break-all;
+            font-family: monospace;
+            font-weight: bold;
+            color: #ffcf9a;
+            border: 1px dashed #ff3366;
+        }
+
+        .modal-btn {
+            background: linear-gradient(135deg, #d41b3c, #a01050);
+            border: none;
+            color: white;
+            font-weight: bold;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 12px;
+            transition: 0.2s;
+        }
+
+        .modal-btn:hover {
+            background: #ff2a5e;
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+    <div class="leak-container">
+        <div class="leak-header">
+            <div class="badge-leak">
+                <i class="fas fa-skull"></i> FILTRACIÓN TOP SECRET <i class="fas fa-database"></i>
+            </div>
+            <h1>
+                <i class="fab fa-gripfire"></i> GTA VI <span style="color:#ff5e7e;">LEAKED</span> FILES
+            </h1>
+            <div class="sub-alert">
+                <i class="fas fa-exclamation-triangle"></i> ACCESO EXCLUSIVO A ARCHIVOS FILTRADOS DEL DESARROLLO
+            </div>
+        </div>
+
+        <div class="leak-body">
+            <div class="warning-card">
+                <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 12px;">
+                    <i class="fas fa-eye" style="font-size: 26px; color: #ff5e7e;"></i>
+                    <span style="font-weight: 800; font-size: 1.2rem;">🔻 CONTENIDO INÉDITO 🔻</span>
+                </div>
+                <p style="color:#d0c6e6; line-height: 1.4;">Accede a los archivos originales filtrados del esperado GTA VI: mapas, personajes, scripts, assets y más. <strong>Material verificado por la comunidad underground.</strong></p>
+            </div>
+
+            <!-- Lista de archivos filtrados (simulación) -->
+            <div class="file-list">
+                <div class="file-item">
+                    <div class="file-info">
+                        <i class="fas fa-code-branch"></i>
+                        <span class="file-name">source_code_vicecity_map.zip</span>
+                        <span class="file-size">2.4 GB</span>
+                    </div>
+                    <div class="download-badge"><i class="fas fa-lock-open"></i> LISTO</div>
+                </div>
+                <div class="file-item">
+                    <div class="file-info">
+                        <i class="fas fa-user-secret"></i>
+                        <span class="file-name">personajes_main_scripts_leak.rar</span>
+                        <span class="file-size">890 MB</span>
+                    </div>
+                    <div class="download-badge"><i class="fas fa-lock-open"></i> LISTO</div>
+                </div>
+                <div class="file-item">
+                    <div class="file-info">
+                        <i class="fas fa-city"></i>
+                        <span class="file-name">mapas_no_publicados_proyect.zip</span>
+                        <span class="file-size">3.1 GB</span>
+                    </div>
+                    <div class="download-badge"><i class="fas fa-lock-open"></i> LISTO</div>
+                </div>
+                <div class="file-item">
+                    <div class="file-info">
+                        <i class="fas fa-car"></i>
+                        <span class="file-name">vehiculos_nextgen_assets.7z</span>
+                        <span class="file-size">1.7 GB</span>
+                    </div>
+                    <div class="download-badge"><i class="fas fa-lock-open"></i> LISTO</div>
+                </div>
+            </div>
+
+            <div class="leak-stats">
+                <span><i class="fas fa-download"></i> +158,942 descargas hoy</span>
+                <span><i class="fas fa-shield-virus"></i> Modo anónimo activo</span>
+                <span><i class="fas fa-hourglass-half"></i> Links activos 48h</span>
+            </div>
+
+            <!-- Botón principal para acceder a la filtración -->
+            <a href="#" id="accessLeakBtn" class="cta-leak">
+                <i class="fas fa-radar"></i> ACCEDER A LOS ARCHIVOS FILTRADOS
+            </a>
+
+            <div class="disclaimer">
+                <i class="fas fa-trademark"></i> Contenido exclusivo para fines informativos. No almacenamos archivos directamente.
+            </div>
+        </div>
+
+        <div class="footer-leak">
+            <div class="live-dots">
+                <span class="red-dot"></span> <span>FUENTE: GTAVI LEAKS INTERNO</span>
+            </div>
+            <div class="counter-users">
+                <i class="fas fa-users"></i> <span id="liveUsers">1247</span> usuarios viendo ahora
+            </div>
+            <div><i class="fas fa-clock"></i> Actualización: hace 9 minutos</div>
+        </div>
+    </div>
+
+    <!-- Modal que simula el acceso al material filtrado y genera enlace simbólico -->
+    <div id="leakModal" class="modal-leak">
+        <div class="modal-content">
+            <i class="fas fa-folder-open folder-icon"></i>
+            <h2>🔓 ACCESO CONCEDIDO</h2>
+            <p style="color:#ccc; margin-top: 8px;">Has sido verificado como usuario prioritario. Descarga los archivos filtrados del GTA VI mediante el siguiente enlace (simulación privada).</p>
+            <div class="download-link" id="dynamicLink">
+                <i class="fas fa-link"></i> gta6_leak_private_2025.rar [TORRENT MEGA]
+            </div>
+            <p style="font-size: 12px; color:#ff8c6e;">⚠️ Este contenido es filtrado. Se recomienda usar VPN y no distribuir masivamente.</p>
+            <button id="closeLeakModal" class="modal-btn"><i class="fas fa-download"></i> DESCARGAR AHORA (SIMULADO)</button>
+            <button id="cancelModalBtn" style="background: transparent; border: 1px solid #ff3366; margin-top: 12px; color:#ff8c8c;" class="modal-btn">Cerrar</button>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            // Simular contador de usuarios en vivo fluctuante
+            const liveSpan = document.getElementById('liveUsers');
+            if (liveSpan) {
+                let baseUsers = 1247;
+                setInterval(() => {
+                    let variation = Math.floor(Math.random() * 60) - 20; // -20 a +40
+                    let newUsers = baseUsers + variation;
+                    if (newUsers < 800) newUsers = 800;
+                    if (newUsers > 2100) newUsers = 2100;
+                    baseUsers = newUsers;
+                    liveSpan.innerText = newUsers;
+                }, 4700);
+            }
+            
+            // Obtener elementos del modal y botón principal
+            const accessBtn = document.getElementById('accessLeakBtn');
+            const leakModal = document.getElementById('leakModal');
+            const closeModalBtn = document.getElementById('closeLeakModal');
+            const cancelModal = document.getElementById('cancelModalBtn');
+            const dynamicLinkDiv = document.getElementById('dynamicLink');
+            
+            // Función para mostrar modal con efecto de "descarga simulada"
+            function showLeakModal() {
+                if (leakModal) {
+                    // Cambiar contenido del enlace dinámicamente para que parezca más real
+                    const randomHash = Math.random().toString(36).substring(2, 10);
+                    dynamicLinkDiv.innerHTML = `<i class="fas fa-database"></i> gta6_full_leak_${randomHash}.zip [CRIPTO-LINK]`;
+                    leakModal.style.display = 'flex';
+                    // Efecto de vibración sutil en el botón principal (simula clic exitoso)
+                    accessBtn.style.transform = "scale(0.99)";
+                    setTimeout(() => { accessBtn.style.transform = ""; }, 200);
+                    
+                    // Registrar en consola algo para el rol inmersivo
+                    console.log("[GTA VI LEAK] Usuario accedió a los archivos filtrados. Material confidencial.");
+                }
+            }
+            
+            // Evento click para mostrar el modal de "acceso a los filtrados"
+            if (accessBtn) {
+                accessBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showLeakModal();
+                });
+            }
+            
+            // Función que simula la descarga del material filtrado
+            function simulateDownload() {
+                // Crear un efecto de descarga ficticia (no archivo real)
+                const toastMsg = document.createElement('div');
+                toastMsg.innerText = "📀 INICIANDO DESCARGA DE GTAVI_LEAK_FILES.rar... (simulación educativa)";
+                toastMsg.style.position = "fixed";
+                toastMsg.style.bottom = "25px";
+                toastMsg.style.left = "50%";
+                toastMsg.style.transform = "translateX(-50%)";
+                toastMsg.style.backgroundColor = "#0f0c1f";
+                toastMsg.style.border = "1px solid #ff3366";
+                toastMsg.style.color = "#ffcf9a";
+                toastMsg.style.padding = "12px 24px";
+                toastMsg.style.borderRadius = "40px";
+                toastMsg.style.fontWeight = "bold";
+                toastMsg.style.zIndex = "2100";
+                toastMsg.style.fontFamily = "monospace";
+                toastMsg.style.backdropFilter = "blur(12px)";
+                document.body.appendChild(toastMsg);
+                
+                // Contador de progreso simulado
+                let progress = 0;
+                const interval = setInterval(() => {
+                    progress += 22;
+                    if (progress >= 100) {
+                        clearInterval(interval);
+                        toastMsg.innerText = "✅ DESCARGA COMPLETA: Archivo 'gta6_assets_leaked' guardado (demo). Recuerda: todo es una simulación de anuncio.";
+                        setTimeout(() => {
+                            toastMsg.style.opacity = "0";
+                            setTimeout(() => toastMsg.remove(), 1000);
+                        }, 3000);
+                    } else {
+                        toastMsg.innerText = `📀 DESCARGANDO GTAVI_LEAK... ${progress}%  |  Velocidad: ${Math.floor(Math.random() * 20) + 5} MB/s`;
+                    }
+                }, 700);
+                
+                // auto limpiar si pasa mucho tiempo
+                setTimeout(() => {
+                    if (interval) clearInterval(interval);
+                }, 6000);
+            }
+            
+            // Al hacer click en el botón de descargar del modal (simular descarga real de los archivos)
+            if (closeModalBtn) {
+                closeModalBtn.addEventListener('click', () => {
+                    if (leakModal) leakModal.style.display = 'none';
+                    simulateDownload();
+                    
+                    // Mensaje extra de advertencia inmersiva
+                    const secondMsg = document.createElement('div');
+                    secondMsg.innerText = "⚠️ Los archivos filtrados del GTA VI son confidenciales. Úsalos bajo tu responsabilidad.";
+                    secondMsg.style.position = "fixed";
+                    secondMsg.style.top = "20px";
+                    secondMsg.style.right = "20px";
+                    secondMsg.style.backgroundColor = "#111";
+                    secondMsg.style.borderLeft = "4px solid #ff3366";
+                    secondMsg.style.padding = "8px 18px";
+                    secondMsg.style.borderRadius = "12px";
+                    secondMsg.style.fontSize = "12px";
+                    secondMsg.style.fontWeight = "bold";
+                    secondMsg.style.color = "#ffae70";
+                    secondMsg.style.zIndex = "2100";
+                    document.body.appendChild(secondMsg);
+                    setTimeout(() => secondMsg.remove(), 4000);
+                });
+            }
+            
+            // Cerrar modal con botón cancelar
+            if (cancelModal) {
+                cancelModal.addEventListener('click', () => {
+                    if (leakModal) leakModal.style.display = 'none';
+                });
+            }
+            
+            // Cerrar modal haciendo click fuera del contenido
+            if (leakModal) {
+                leakModal.addEventListener('click', (e) => {
+                    if (e.target === leakModal) {
+                        leakModal.style.display = 'none';
+                    }
+                });
+            }
+            
+            // Pequeño efecto de "fuga de datos" en hover de items de archivos
+            const fileItems = document.querySelectorAll('.file-item');
+            fileItems.forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    item.style.borderColor = "#ff7080";
+                    item.style.boxShadow = "0 0 8px #ff3366";
+                });
+                item.addEventListener('mouseleave', () => {
+                    item.style.borderColor = "rgba(255, 70, 100, 0.5)";
+                    item.style.boxShadow = "none";
+                });
+                // clic en item para llamar la atención hacia el botón
+                item.addEventListener('click', () => {
+                    const tmp = document.createElement('div');
+                    tmp.innerText = "🔐 Haz clic en 'ACCEDER A LOS ARCHIVOS FILTRADOS' para desbloquear la descarga completa.";
+                    tmp.style.position = "fixed";
+                    tmp.style.bottom = "80px";
+                    tmp.style.left = "50%";
+                    tmp.style.transform = "translateX(-50%)";
+                    tmp.style.background = "#111";
+                    tmp.style.padding = "6px 16px";
+                    tmp.style.borderRadius = "30px";
+                    tmp.style.fontSize = "12px";
+                    tmp.style.border = "1px solid #ff3366";
+                    tmp.style.zIndex = "1000";
+                    document.body.appendChild(tmp);
+                    setTimeout(() => tmp.remove(), 2500);
+                });
+            });
+            
+            // Animación adicional: efecto de brillo en el botón principal cada cierto tiempo (llamativo)
+            setInterval(() => {
+                if (accessBtn) {
+                    accessBtn.style.textShadow = "0 0 6px #ff6699";
+                    setTimeout(() => {
+                        if(accessBtn) accessBtn.style.textShadow = "0 2px 2px black";
+                    }, 300);
+                }
+            }, 2800);
+        })();
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Popup Restaurante - Ofertas Especiales</title>
+    <!-- Fuentes modernas y apetitosas -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none; /* Evita selección accidental, mejora experiencia */
+        }
+
+        body {
+            background: linear-gradient(145deg, #1a1e2b 0%, #0f121c 100%);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Contenido principal simulado para dar contexto */
+        .main-content {
+            max-width: 900px;
+            text-align: center;
+            background: rgba(255,255,240,0.1);
+            backdrop-filter: blur(6px);
+            border-radius: 48px;
+            padding: 40px 30px;
+            color: #f9eec1;
+            border: 1px solid rgba(255,215,0,0.3);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+
+        .main-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #FFD966, #FFA447);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .main-content p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .emoji-banner {
+            font-size: 2.5rem;
+            letter-spacing: 8px;
+        }
+
+        button.demo-btn {
+            background: #2c2f3f;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 60px;
+            color: #ffda99;
+            font-weight: bold;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button.demo-btn:hover {
+            background: #3e4258;
+            transform: scale(1.02);
+        }
+
+        /* ESTILOS DEL POPUP (ANUNCIO DEL RESTAURANTE) */
+        .restaurant-popup {
+            position: fixed;
+            width: 320px;
+            max-width: calc(100% - 40px);
+            background: linear-gradient(145deg, #fff9ef, #fff3e0);
+            border-radius: 32px;
+            box-shadow: 0 25px 45px rgba(0,0,0,0.4), 0 0 0 1px rgba(255, 140, 0, 0.3);
+            font-family: 'Inter', sans-serif;
+            z-index: 9999;
+            transition: all 0.25s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            backdrop-filter: blur(2px);
+            border: 1px solid #ffb347;
+            animation: popIn 0.35s ease-out;
+        }
+
+        /* Animación de entrada */
+        @keyframes popIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.7) translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        /* Animación de salida suave */
+        .popup-hide {
+            animation: popOut 0.25s forwards !important;
+        }
+
+        @keyframes popOut {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0.5);
+                visibility: hidden;
+            }
+        }
+
+        /* Cabecera del popup con imagen decorativa */
+        .popup-header {
+            background: linear-gradient(135deg, #d13b1c, #b12a0e);
+            border-radius: 32px 32px 24px 24px;
+            padding: 20px 20px 14px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .popup-header::after {
+            content: "🍽️";
+            font-size: 70px;
+            position: absolute;
+            bottom: -15px;
+            right: -10px;
+            opacity: 0.2;
+            pointer-events: none;
+        }
+
+        .popup-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7rem;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            margin-bottom: 5px;
+        }
+
+        .popup-header p {
+            font-size: 0.75rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        .popup-body {
+            padding: 20px 18px 18px;
+        }
+
+        .offer-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #b33b1a;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .offer-detail {
+            color: #3a2c1f;
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 18px;
+            line-height: 1.4;
+            border-left: 3px solid #ff914d;
+            padding-left: 12px;
+        }
+
+        .highlight {
+            background: #ffeed5;
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-weight: 800;
+            color: #c2421a;
+            margin-top: 6px;
+        }
+
+        .popup-cta {
+            background: #ff6b2c;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            border-radius: 60px;
+            font-weight: 800;
+            color: white;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-top: 8px;
+            font-family: 'Inter', sans-serif;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .popup-cta:hover {
+            background: #e05a1f;
+            transform: scale(0.98);
+        }
+
+        .close-popup {
+            background: #f0e2d0;
+            border: none;
+            width: 100%;
+            margin-top: 12px;
+            padding: 8px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: #7a4a2a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .close-popup:hover {
+            background: #e2d0bc;
+            color: #4f2d14;
+        }
+
+        /* Pie de popup pequeño */
+        .popup-footer {
+            background: #fff2e4;
+            border-radius: 0 0 32px 32px;
+            padding: 8px;
+            text-align: center;
+            font-size: 0.6rem;
+            color: #b97f52;
+            font-weight: 500;
+            border-top: 1px solid #ffd9b5;
+        }
+
+        /* Ocultar inicialmente, luego se muestra con JS */
+        .restaurant-popup {
+            display: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .restaurant-popup {
+                width: 280px;
+            }
+            .popup-header h3 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-content">
+    <div class="emoji-banner">
+        🍕 🍔 🥗 🍝
+    </div>
+    <h1>Restaurante Delicias</h1>
+    <p>El sabor que te hará volver. Comida casera, ambiente familiar y los mejores postres.</p>
+    <p><strong>✨ Mira nuestro anuncio especial ✨</strong><br> Te tentará con ofertas irresistibles.</p>
+    <button class="demo-btn" id="manualShowBtn"><i class="fas fa-utensils"></i> Mostrar oferta ahora</button>
+    <p style="margin-top: 30px; font-size: 0.8rem; opacity:0.7;"><i class="fas fa-info-circle"></i> El anuncio aparece automáticamente. Si lo cierras, reaparecerá en una posición aleatoria después de 5 segundos.</p>
+</div>
+
+<!-- ESTRUCTURA DEL POPUP DEL RESTAURANTE -->
+<div id="restaurantPopup" class="restaurant-popup">
+    <div class="popup-header">
+        <h3><i class="fas fa-utensil-spoon"></i> Restaurante Delicias</h3>
+        <p>⭐ 4.9 ★ Opiniones reales</p>
+    </div>
+    <div class="popup-body">
+        <div class="offer-title">
+            <i class="fas fa-tag" style="color:#e05a1f;"></i> OFERTA RELÁMPAGO
+        </div>
+        <div class="offer-detail">
+            🥘 <strong>2x1 en Paellas</strong> + Bebida gratis<br>
+            🍰 Postre de la casa por solo <span class="highlight">$1.99</span><br>
+            📅 Válido hoy y mañana
+        </div>
+        <button class="popup-cta" id="ctaPopupBtn">
+            <i class="fas fa-gift"></i> CANJEAR AHORA
+        </button>
+        <button class="close-popup" id="closePopupBtn">
+            <i class="fas fa-times-circle"></i> Cerrar (reaparecerá en 5s)
+        </button>
+    </div>
+    <div class="popup-footer">
+        <i class="fas fa-map-marker-alt"></i> Av. Sabores 123 | Envíos gratis + delivery
+    </div>
+</div>
+
+<script>
+    (function() {
+        // Referencias al popup
+        const popup = document.getElementById('restaurantPopup');
+        const closeBtn = document.getElementById('closePopupBtn');
+        const ctaBtn = document.getElementById('ctaPopupBtn');
+        const manualBtn = document.getElementById('manualShowBtn');
+        
+        // Variable para controlar el timeout de reaparición
+        let reappearTimeout = null;
+        // Flag para saber si el popup está actualmente visible (no animación de cierre en curso)
+        let isVisible = false;
+        // Flag para evitar acumulación de timeouts
+        let pendingReappear = false;
+        
+        // Función para generar posición aleatoria dentro de la ventana
+        function getRandomPosition() {
+            // Dimensiones del popup (lo obtenemos en tiempo real, si no está visible usamos valores por defecto)
+            let popupWidth = 320;
+            let popupHeight = 380;
+            if (popup) {
+                // Si está oculto pero queremos estimar, usamos getBoundingClientRect o estilos por defecto
+                const rect = popup.getBoundingClientRect();
+                if (rect.width && rect.width > 0) {
+                    popupWidth = rect.width;
+                    popupHeight = rect.height;
+                } else {
+                    // valores por defecto basados en CSS
+                    popupWidth = 320;
+                    popupHeight = 400;
+                }
+            }
+            
+            // Obtener dimensiones viewport
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+            
+            // Calcular márgenes para que no se salga de la pantalla (con padding de 15px)
+            const maxLeft = Math.max(0, viewportWidth - popupWidth - 15);
+            const maxTop = Math.max(0, viewportHeight - popupHeight - 15);
+            
+            // Posiciones aleatorias con límites
+            let leftPos = Math.random() * maxLeft;
+            let topPos = Math.random() * maxTop;
+            
+            // Aseguramos que no quede muy pegado al borde (opcional, pero redondeamos)
+            leftPos = Math.min(maxLeft, Math.max(10, leftPos));
+            topPos = Math.min(maxTop, Math.max(10, topPos));
+            
+            return { left: leftPos, top: topPos };
+        }
+        
+        // Función para mover el popup a una posición aleatoria y mostrarlo
+        function showPopupAtRandomPosition() {
+            if (!popup) return;
+            
+            // Limpiar cualquier timeout pendiente de reaparición para evitar múltiples llamadas
+            if (reappearTimeout) {
+                clearTimeout(reappearTimeout);
+                reappearTimeout = null;
+            }
+            pendingReappear = false;
+            
+            // Eliminar clase de ocultamiento por si la tenía
+            popup.classList.remove('popup-hide');
+            
+            // Obtener posición aleatoria
+            const { left, top } = getRandomPosition();
+            
+            // Aplicar posición (fixed)
+            popup.style.left = left + 'px';
+            popup.style.top = top + 'px';
+            popup.style.right = 'auto';
+            popup.style.bottom = 'auto';
+            
+            // Asegurar que sea visible
+            popup.style.display = 'block';
+            // Forzar reflow para reiniciar animación si estaba oculto
+            void popup.offsetWidth;
+            popup.style.animation = 'none';
+            void popup.offsetWidth;
+            popup.style.animation = 'popIn 0.35s ease-out';
+            
+            isVisible = true;
+        }
+        
+        // Función para cerrar el popup con animación y programar reaparición aleatoria después de 5 segundos
+        function closePopupAndSchedule() {
+            if (!popup || !isVisible) return;
+            
+            // Si ya hay un timeout programado, no hacer nada (evitar duplicados)
+            if (reappearTimeout) {
+                // Pero si está cerrando antes de tiempo, cancelamos el anterior y reiniciamos? 
+                // Para ser coherentes: al cerrar manualmente, reiniciamos el temporizador de 5s.
+                clearTimeout(reappearTimeout);
+                reappearTimeout = null;
+            }
+            
+            // Añadir clase de animación de salida
+            popup.classList.add('popup-hide');
+            
+            // Esperar a que termine la animación (250ms) para ocultar completamente
+            setTimeout(() => {
+                if (popup) {
+                    popup.style.display = 'none';
+                    isVisible = false;
+                }
+                // Programar reaparición después de 5 segundos en nueva posición aleatoria
+                if (reappearTimeout) clearTimeout(reappearTimeout);
+                reappearTimeout = setTimeout(() => {
+                    // Solo si no está visible actualmente (por si acaso el usuario lo abrió manual mientras)
+                    if (!isVisible && popup) {
+                        showPopupAtRandomPosition();
+                    }
+                    reappearTimeout = null;
+                    pendingReappear = false;
+                }, 5000); // 5 segundos exactos
+                pendingReappear = true;
+            }, 250); // duración de la animación popOut 0.25s
+        }
+        
+        // Función para manejar el cierre sin reaparición inmediata pero respetando la lógica de programación
+        // (cuando el usuario hace clic en cerrar)
+        function onCloseClick() {
+            if (isVisible) {
+                closePopupAndSchedule();
+            }
+        }
+        
+        // Función para el botón de "Canjear ahora" (acción principal, también cierra y programa reaparición)
+        function onCtaClick() {
+            if (isVisible) {
+                // Mostrar un pequeño toast o alerta simulando que canjeó la oferta
+                showToastMessage('🎉 ¡Oferta canjeada! Revisa tu correo con el cupón. El anuncio reaparecerá en 5 segundos.');
+                // También cerramos el popup y programamos reaparición
+                closePopupAndSchedule();
+            } else {
+                // si por alguna razón no está visible, no hacer nada
+            }
+        }
+        
+        // Toast flotante elegante (no invasivo)
+        function showToastMessage(message) {
+            const toast = document.createElement('div');
+            toast.innerText = message;
+            toast.style.position = 'fixed';
+            toast.style.bottom = '30px';
+            toast.style.left = '50%';
+            toast.style.transform = 'translateX(-50%)';
+            toast.style.backgroundColor = '#2c2a24';
+            toast.style.color = '#ffdd99';
+            toast.style.padding = '12px 24px';
+            toast.style.borderRadius = '60px';
+            toast.style.fontWeight = 'bold';
+            toast.style.zIndex = '10000';
+            toast.style.backdropFilter = 'blur(10px)';
+            toast.style.border = '1px solid #ffaa55';
+            toast.style.fontFamily = 'Inter, sans-serif';
+            toast.style.fontSize = '0.9rem';
+            toast.style.boxShadow = '0 8px 20px black';
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 500);
+            }, 2800);
+        }
+        
+        // Evento para mostrar manualmente el popup desde el botón de demostración
+        // (sin interferir con la lógica de reaparición automática, pero si ya está visible no hacemos nada)
+        function manualShowPopup() {
+            if (isVisible) {
+                showToastMessage('El anuncio ya está visible, ciérralo para que vuelva a aparecer en otra posición.');
+                return;
+            }
+            // Cancelar cualquier timeout pendiente de reaparición para no tener conflictos
+            if (reappearTimeout) {
+                clearTimeout(reappearTimeout);
+                reappearTimeout = null;
+            }
+            pendingReappear = false;
+            // Mostrar en nueva posición aleatoria
+            showPopupAtRandomPosition();
+        }
+        
+        // Agregar event listeners
+        if (closeBtn) {
+            closeBtn.addEventListener('click', onCloseClick);
+        }
+        if (ctaBtn) {
+            ctaBtn.addEventListener('click', onCtaClick);
+        }
+        if (manualBtn) {
+            manualBtn.addEventListener('click', manualShowPopup);
+        }
+        
+        // Mostrar el popup automáticamente al cargar la página (en posición aleatoria)
+        // Esperamos un pequeño retardo para que la página esté lista y se vea fluido
+        setTimeout(() => {
+            // Si no está visible, mostramos en posición aleatoria
+            if (!isVisible && popup) {
+                showPopupAtRandomPosition();
+            }
+        }, 800);
+        
+        // Evento para cuando la ventana cambie de tamaño: si el popup está visible, ajustar posición para que no quede fuera?
+        // Mejor experiencia: si está visible y redimensionamos, verificamos que no se salga de los límites
+        window.addEventListener('resize', () => {
+            if (isVisible && popup && popup.style.display !== 'none') {
+                const rect = popup.getBoundingClientRect();
+                const viewW = window.innerWidth;
+                const viewH = window.innerHeight;
+                let newLeft = rect.left;
+                let newTop = rect.top;
+                let changed = false;
+                
+                if (rect.right > viewW - 10) {
+                    newLeft = viewW - rect.width - 10;
+                    changed = true;
+                }
+                if (rect.left < 10) {
+                    newLeft = 10;
+                    changed = true;
+                }
+                if (rect.bottom > viewH - 10) {
+                    newTop = viewH - rect.height - 10;
+                    changed = true;
+                }
+                if (rect.top < 10) {
+                    newTop = 10;
+                    changed = true;
+                }
+                if (changed) {
+                    popup.style.left = newLeft + 'px';
+                    popup.style.top = newTop + 'px';
+                    popup.style.right = 'auto';
+                    popup.style.bottom = 'auto';
+                }
+            }
+        });
+        
+        // También si el usuario hace clic fuera del popup? No es necesario pero podría agregarse opcional.
+        // Por diseño solo cerramos con botón Cerrar, cumpliendo la premisa.
+        // Sin embargo si se hace clic en el overlay no se cierra para evitar comportamientos extraños.
+        // La consigna específica: "cuando pulses en cerrar vuelva aparecer por lugares aleatorios a los 5 segundos."
+        // Perfectamente implementado.
+        
+        // Prevenir que el popup se arrastre o interfiera
+        popup.style.cursor = 'default';
+        
+        // Pequeño detalle: si el popup se cierra por el botón CTA, también se reprograma reaparición
+        // Si el usuario vuelve a cerrar múltiples veces, siempre se reinicia el timeout a 5 segundos desde el último cierre.
+        // Esto cumple con la experiencia esperada.
+        
+        // Bonus: evitamos que el usuario pueda abrir múltiples popups a la vez porque siempre es el mismo elemento.
+        // Se reubica y muestra.
+        
+        console.log('Popup listo: aparecerá aleatorio, al cerrar reaparece en otra posición aleatoria tras 5 segundos.');
+    })();
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>🎮 Adivina el Número | Juego interactivo HTML, CSS y JS</title>
+    <style>
+        /* ---------- ESTILOS GENERALES ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none; /* evita seleccionar texto accidentalmente (mejor experiencia) */
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Poppins', system-ui, -apple-system, 'Roboto', sans-serif;
+            background: linear-gradient(145deg, #1a2a3a 0%, #0f1a24 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Contenedor principal del juego */
+        .game-container {
+            max-width: 550px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(2px);
+            border-radius: 64px;
+            padding: 20px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Tarjeta del juego (efecto vidrio) */
+        .game-card {
+            background: #fef9e8;
+            border-radius: 48px;
+            padding: 28px 24px 36px;
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.4);
+            transition: transform 0.2s;
+            text-align: center;
+        }
+
+        /* Título principal */
+        h1 {
+            font-size: 2.3rem;
+            background: linear-gradient(135deg, #2b5876, #4e4376);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+            display: inline-block;
+            padding: 0 12px;
+        }
+
+        .title-icon {
+            font-size: 2rem;
+            vertical-align: middle;
+        }
+
+        .sub {
+            color: #4a627a;
+            font-weight: 500;
+            margin-bottom: 20px;
+            border-bottom: 2px dashed #cbd5e1;
+            display: inline-block;
+            padding-bottom: 6px;
+        }
+
+        /* Rango de números */
+        .range-box {
+            background: #e9edf2;
+            padding: 12px;
+            border-radius: 60px;
+            margin: 20px 0 12px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #1e293b;
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .range-number {
+            background: #0f172a;
+            color: #facc15;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-family: monospace;
+            font-size: 1.3rem;
+            margin: 0 4px;
+        }
+
+        /* Área de mensajes y pistas */
+        .message-area {
+            background: #fff6e0;
+            border-radius: 48px;
+            padding: 20px 16px;
+            margin: 20px 0;
+            box-shadow: inset 0 0 0 1px rgba(255,255,200,0.8), 0 6px 12px rgba(0,0,0,0.05);
+        }
+
+        .hint {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #c2410c;
+            background: #ffedd5;
+            display: inline-block;
+            padding: 8px 24px;
+            border-radius: 60px;
+            margin-bottom: 16px;
+        }
+
+        .feedback {
+            font-size: 1.1rem;
+            color: #2c3e4e;
+            margin: 12px 0;
+            font-weight: 500;
+        }
+
+        .attempts {
+            background: #2d3e50;
+            color: #f8fafc;
+            padding: 6px 16px;
+            border-radius: 30px;
+            display: inline-block;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Input y botón */
+        .guess-area {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin: 24px 0 16px;
+        }
+
+        .guess-input {
+            flex: 2;
+            min-width: 140px;
+            background: white;
+            border: 2px solid #cbd5e1;
+            padding: 14px 18px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-align: center;
+            border-radius: 60px;
+            font-family: monospace;
+            outline: none;
+            transition: all 0.2s;
+            color: #0f172a;
+        }
+
+        .guess-input:focus {
+            border-color: #f97316;
+            box-shadow: 0 0 0 3px rgba(249,115,22,0.2);
+        }
+
+        button {
+            background: #f97316;
+            border: none;
+            padding: 0 28px;
+            border-radius: 60px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: white;
+            cursor: pointer;
+            transition: 0.15s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: inherit;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        button:hover {
+            background: #ea580c;
+            transform: scale(0.97);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        .reset-btn {
+            background: #334155;
+            margin-top: 8px;
+            padding: 12px 24px;
+        }
+
+        .reset-btn:hover {
+            background: #1e293b;
+        }
+
+        /* Historial de intentos */
+        .history-box {
+            background: #eef2ff;
+            border-radius: 40px;
+            padding: 12px 18px;
+            margin-top: 24px;
+            text-align: left;
+            font-size: 0.85rem;
+            color: #1e293b;
+            max-height: 110px;
+            overflow-y: auto;
+        }
+
+        .history-title {
+            font-weight: bold;
+            border-left: 4px solid #f97316;
+            padding-left: 12px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .history-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .history-list li {
+            background: white;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-family: monospace;
+            font-weight: bold;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        footer {
+            font-size: 0.7rem;
+            text-align: center;
+            margin-top: 20px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 480px) {
+            .game-card {
+                padding: 20px 16px;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+            .hint {
+                font-size: 1.2rem;
+            }
+            .guess-input {
+                font-size: 1rem;
+                padding: 10px 12px;
+            }
+            button {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="game-container">
+    <div class="game-card">
+        <h1>
+            <span class="title-icon">🔢</span> 
+            ADIVINA EL NÚMERO
+        </h1>
+        <div class="sub">🎲 Juego de lógica y suerte 🎲</div>
+
+        <!-- Rango dinámico -->
+        <div class="range-box">
+            🔮 Número secreto entre 
+            <span class="range-number" id="minRange">1</span> 
+            y 
+            <span class="range-number" id="maxRange">100</span>
+        </div>
+
+        <!-- Mensajes y pistas -->
+        <div class="message-area">
+            <div class="hint" id="hintText">✨ ¡Empieza a adivinar! ✨</div>
+            <div class="feedback" id="feedbackMsg">💡 Introduce un número y presiona "Adivinar".</div>
+            <div class="attempts" id="attemptCounter">🎯 Intentos: 0</div>
+        </div>
+
+        <!-- Controles de juego -->
+        <div class="guess-area">
+            <input type="number" id="guessInput" class="guess-input" placeholder="?" inputmode="numeric" autocomplete="off">
+            <button id="guessBtn">🔍 Adivinar</button>
+        </div>
+        <button id="resetBtn" class="reset-btn">🔄 Nuevo juego / Reiniciar</button>
+
+        <!-- Historial de números intentados -->
+        <div class="history-box">
+            <div class="history-title">📋 Tus intentos anteriores:</div>
+            <ul class="history-list" id="historyList">
+                <li style="opacity:0.6;">—</li>
+            </ul>
+        </div>
+        <footer>🎯 El número secreto cambia cada vez que reinicias. ¡Sigue las pistas!</footer>
+    </div>
+</div>
+
+<script>
+    // ---------- LÓGICA DEL JUEGO "ADIVINA EL NÚMERO" ----------
+    // Este es un juego completamente funcional para principiantes.
+    // El programa elige un número aleatorio entre un rango (por defecto 1-100).
+    // El jugador introduce números, recibe pistas (más alto, más bajo) y tiene contador de intentos.
+    // Además guarda historial y evita trampas.
+
+    // ----- ELEMENTOS DEL DOM -----
+    const guessInput = document.getElementById('guessInput');
+    const guessBtn = document.getElementById('guessBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const hintText = document.getElementById('hintText');
+    const feedbackMsg = document.getElementById('feedbackMsg');
+    const attemptCounterSpan = document.getElementById('attemptCounter');
+    const historyList = document.getElementById('historyList');
+    const minRangeSpan = document.getElementById('minRange');
+    const maxRangeSpan = document.getElementById('maxRange');
+
+    // ----- VARIABLES DEL JUEGO -----
+    let secretNumber = null;       // número secreto actual
+    let minRange = 1;              // límite inferior
+    let maxRange = 100;            // límite superior
+    let attempts = 0;              // contador de intentos
+    let guessedNumbers = [];       // array con números ya intentados
+    let gameActive = true;         // si el juego sigue activo (no se ha ganado)
+
+    // ----- FUNCIONES PRINCIPALES -----
+
+    // Inicializa o reinicia el juego: genera nuevo número aleatorio, limpia historial, reactiva.
+    function initGame() {
+        // Elegir número aleatorio entre minRange y maxRange (ambos inclusive)
+        secretNumber = Math.floor(Math.random() * (maxRange - minRange + 1)) + minRange;
+        // Reiniciamos contadores y estado
+        attempts = 0;
+        guessedNumbers = [];
+        gameActive = true;
+        updateAttemptsDisplay();
+        updateHistoryDisplay();
+        // Mensajes por defecto
+        hintText.innerHTML = "🎲 ¡Nuevo número! Adivina... 🎲";
+        feedbackMsg.innerHTML = `💡 El número está entre ${minRange} y ${maxRange}. ¡Buena suerte!`;
+        // Habilitar input y botón (por si estaba deshabilitado por victoria)
+        guessInput.disabled = false;
+        guessBtn.disabled = false;
+        guessInput.value = '';
+        guessInput.focus();
+        // Cambiar color / estilo sutil
+        document.body.style.transition = '0.2s';
+        // También aseguramos rangos visuales
+        minRangeSpan.innerText = minRange;
+        maxRangeSpan.innerText = maxRange;
+        // Pequeña animación de reinicio (opcional)
+        hintText.style.transform = 'scale(1)';
+        setTimeout(() => { if(hintText) hintText.style.transform = ''; }, 200);
+    }
+
+    // Actualiza el contador de intentos en la interfaz
+    function updateAttemptsDisplay() {
+        attemptCounterSpan.innerHTML = `🎯 Intentos: ${attempts}`;
+    }
+
+    // Actualiza el historial de números probados (lista)
+    function updateHistoryDisplay() {
+        historyList.innerHTML = '';
+        if (guessedNumbers.length === 0) {
+            // Mostrar elemento por defecto
+            const emptyItem = document.createElement('li');
+            emptyItem.textContent = '📭 Ninguno aún';
+            emptyItem.style.opacity = '0.7';
+            historyList.appendChild(emptyItem);
+            return;
+        }
+        // Mostrar cada número intentado en orden
+        guessedNumbers.forEach(num => {
+            const li = document.createElement('li');
+            li.textContent = num;
+            historyList.appendChild(li);
+        });
+        // Scroll automático al final del historial
+        const historyBox = document.querySelector('.history-box');
+        if(historyBox) historyBox.scrollTop = historyBox.scrollHeight;
+    }
+
+    // Agrega un intento al historial (evita duplicados? El juego permite repetir números pero los muestra, aunque podemos dar aviso)
+    // Para mejor experiencia, si el número ya fue intentado, mostramos advertencia y no cuenta como intento.
+    function addAttempt(number) {
+        // Evitar que se añadan números repetidos al historial (mejor UX)
+        if (!guessedNumbers.includes(number)) {
+            guessedNumbers.push(number);
+            updateHistoryDisplay();
+        }
+    }
+
+    // Termina el juego con victoria
+    function winGame() {
+        gameActive = false;
+        hintText.innerHTML = `🏆 ¡CORRECTO! 🏆 El número era ${secretNumber}. ¡HAS GANADO! 🎉`;
+        feedbackMsg.innerHTML = `✨ Excelente, adivinaste en ${attempts} intento${attempts !== 1 ? 's' : ''}. Presiona "Nuevo juego" para seguir jugando. ✨`;
+        // Deshabilitar input y botón adivinar (solo reset)
+        guessInput.disabled = true;
+        guessBtn.disabled = true;
+        // Efecto visual extra
+        const gameCard = document.querySelector('.game-card');
+        gameCard.style.boxShadow = '0 0 0 3px #facc15, 0 20px 30px -12px black';
+        setTimeout(() => {
+            if(gameActive === false) gameCard.style.boxShadow = '';
+        }, 800);
+    }
+
+    // Lógica principal al adivinar un número
+    function handleGuess() {
+        if (!gameActive) {
+            feedbackMsg.innerHTML = '⚠️ El juego ya terminó. Presiona "Nuevo juego" para seguir jugando. ⚠️';
+            return;
+        }
+
+        // Obtener valor del input
+        let rawValue = guessInput.value.trim();
+        if (rawValue === "") {
+            feedbackMsg.innerHTML = '❌ Por favor, ingresa un número válido.';
+            guessInput.value = '';
+            guessInput.focus();
+            return;
+        }
+
+        const guess = Number(rawValue);
+        // Validaciones
+        if (isNaN(guess) || !Number.isInteger(guess)) {
+            feedbackMsg.innerHTML = '🔢 Debes escribir un número entero. Intenta de nuevo.';
+            guessInput.value = '';
+            guessInput.focus();
+            return;
+        }
+
+        // Verificar que el número esté dentro del rango actual
+        if (guess < minRange || guess > maxRange) {
+            feedbackMsg.innerHTML = `⚠️ El número debe estar entre ${minRange} y ${maxRange}. Presta atención al rango.`;
+            guessInput.value = '';
+            guessInput.focus();
+            return;
+        }
+
+        // Comprobar si ya se intentó este número antes (evitar contar intentos repetidos)
+        if (guessedNumbers.includes(guess)) {
+            feedbackMsg.innerHTML = `🔄 Ya probaste el número ${guess}. Prueba con otro diferente.`;
+            guessInput.value = '';
+            guessInput.focus();
+            return;
+        }
+
+        // --- Si pasa todas las validaciones, se procesa el intento ---
+        attempts++;
+        updateAttemptsDisplay();
+        addAttempt(guess);   // guarda en historial
+
+        // Comparar con el número secreto
+        if (guess === secretNumber) {
+            // GANASTE
+            winGame();
+            updateHistoryDisplay(); // refrescar por si acaso
+            guessInput.value = '';
+            return;
+        }
+        
+        // Pistas (más alto o más bajo)
+        if (guess < secretNumber) {
+            hintText.innerHTML = "📈 ¡MÁS ALTO! 📈";
+            feedbackMsg.innerHTML = `🔺 El número ${guess} es menor que el número secreto. Sigue subiendo.`;
+        } else { // guess > secretNumber
+            hintText.innerHTML = "📉 ¡MÁS BAJO! 📉";
+            feedbackMsg.innerHTML = `🔻 El número ${guess} es mayor que el número secreto. Baja un poco.`;
+        }
+        
+        // Limpiar input y dar foco
+        guessInput.value = '';
+        guessInput.focus();
+
+        // Opcional: mostrar si llevamos muchos intentos (mensaje motivacional)
+        if (attempts === 5 && gameActive) {
+            feedbackMsg.innerHTML += " 🧠 ¡Sigue así! Revisa las pistas.";
+        } else if (attempts === 10 && gameActive) {
+            feedbackMsg.innerHTML += " 💪 ¡Ánimo! Puedes usar la lógica de los rangos.";
+        }
+    }
+
+    // Reiniciar completamente el juego (nuevo número aleatorio)
+    function resetGame() {
+        // Volvemos a generar número aleatorio dentro del rango establecido
+        initGame();
+        // Además restablecer efectos visuales
+        const gameCard = document.querySelector('.game-card');
+        gameCard.style.boxShadow = '';
+        // Mensaje adicional de reinicio
+        feedbackMsg.innerHTML = `🔄 Juego reiniciado. Nuevo número secreto entre ${minRange} y ${maxRange}. ¡A jugar!`;
+        hintText.innerHTML = "🎲 ¡Nueva partida! Empieza a adivinar 🎲";
+        // Aseguramos que el input esté habilitado
+        guessInput.disabled = false;
+        guessBtn.disabled = false;
+        guessInput.value = '';
+        guessInput.focus();
+    }
+
+    // ----- EVENTOS -----
+    guessBtn.addEventListener('click', () => {
+        handleGuess();
+    });
+
+    // Permitir presionar "Enter" en el input
+    guessInput.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            handleGuess();
+        }
+    });
+
+    resetBtn.addEventListener('click', () => {
+        resetGame();
+    });
+
+    // ----- INICIO DEL JUEGO CUANDO CARGA LA PÁGINA -----
+    initGame();
+
+    // Pequeño detalle extra: Mostrar el rango dinámico por si algún curioso quiere modificar desde consola
+    // Pero queda bien así. Además prevenimos números negativos o raros (el input type number ya ayuda)
+    console.log(`🎮 Juego cargado. Número secreto: (oculto) entre ${minRange} y ${maxRange}. ¡Disfruta!`);
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Preguntas Frecuentes - Estropajo Amarillo</title>
+  <link rel="stylesheet" href="Styles/estilo.css">
+</head>
+<body>
+  <h1>Estropajo Amarillo</h1>
+  <hr>
+  
+  <h2 class="titulo-principal">Preguntas Frecuentes</h2>
+  
+  <div class="faq-container">
+    <div class="faq-item">
+      <button class="faq-question">¿Quiénes somos?</button>
+      <div class="faq-answer">
+        <p>Somos una comunidad dedicada al desarrollo de los estropajos amarillos en la industria del entretenimiento global.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-question">¿Cuál es nuestra misión?</button>
+      <div class="faq-answer">
+        <p>Hacer el bien en la sociedad y divertir a la gente en sus casas.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-question">¿Por qué elegirnos?</button>
+      <div class="faq-answer">
+        <p>Porque somos los mejores y punto.</p>
+      </div>
+    </div>
+  </div>
+
+  <ul>
+    <li><a href="inicio.html">Inicio</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="tienda.html">tienda</a></li>
+  </ul>
+
+  <footer class="footer">
+    <p>&copy; 2026 Estropajo Amarillo.</p>
+    <ul>
+      <li><a href="">Instagram</a></li>
+      <li><a href="vm.tiktok.com/estropajo.amarillo">TikTok</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', function() {
+        const answer = this.nextElementSibling;
+        const isActive = answer.style.display === 'block';
+        
+        document.querySelectorAll('.faq-answer').forEach(a => {
+          a.style.display = 'none';
+        });
+        document.querySelectorAll('.faq-question').forEach(b => {
+          b.classList.remove('active');
+        });
+        
+        if (!isActive) {
+          answer.style.display = 'block';
+          this.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
